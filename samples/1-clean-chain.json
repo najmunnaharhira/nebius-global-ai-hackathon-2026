@@ -1,0 +1,122 @@
+{
+  "name": "Clean chain",
+  "description": "Shantipur mouza, dag 1021. Two sales, both mutated. Nothing should be flagged.",
+  "proposed": {
+    "seller": "Salma Begum",
+    "dag": "1021",
+    "area_decimal": 33
+  },
+  "documents": [
+    {
+      "id": "K1",
+      "doc_type": "khatian",
+      "title": "RS Khatian 412",
+      "date": "1998-03-10",
+      "mouza": "Shantipur",
+      "khatian_no": "412",
+      "owners": [
+        {
+          "name": "Abdul Karim",
+          "father": "Rahmat Ali",
+          "share": 1
+        }
+      ],
+      "parcels": [
+        {
+          "dag": "1021",
+          "area_decimal": 33
+        }
+      ]
+    },
+    {
+      "id": "D1",
+      "doc_type": "deed",
+      "title": "Sale deed 2231/2009",
+      "date": "2009-06-14",
+      "mouza": "Shantipur",
+      "deed_no": "2231/2009",
+      "registry_office": "Sadar Sub-Registry",
+      "sellers": [
+        {
+          "name": "Abdul Karim",
+          "father": "Rahmat Ali"
+        }
+      ],
+      "buyers": [
+        {
+          "name": "Rahim Uddin",
+          "father": "Jalal Uddin"
+        }
+      ],
+      "parcels": [
+        {
+          "dag": "1021",
+          "area_decimal": 33
+        }
+      ]
+    },
+    {
+      "id": "M1",
+      "doc_type": "mutation",
+      "title": "Mutation 118/2010",
+      "date": "2010-02-02",
+      "mouza": "Shantipur",
+      "owners": [
+        {
+          "name": "Rahim Uddin"
+        }
+      ],
+      "parcels": [
+        {
+          "dag": "1021",
+          "area_decimal": 33
+        }
+      ]
+    },
+    {
+      "id": "D2",
+      "doc_type": "deed",
+      "title": "Sale deed 5120/2016",
+      "date": "2016-11-21",
+      "mouza": "Shantipur",
+      "deed_no": "5120/2016",
+      "registry_office": "Sadar Sub-Registry",
+      "sellers": [
+        {
+          "name": "Rahim Uddin",
+          "father": "Jalal Uddin"
+        }
+      ],
+      "buyers": [
+        {
+          "name": "Salma Begum",
+          "father": "Habibur Rahman"
+        }
+      ],
+      "parcels": [
+        {
+          "dag": "1021",
+          "area_decimal": 33
+        }
+      ]
+    },
+    {
+      "id": "M2",
+      "doc_type": "mutation",
+      "title": "Mutation 977/2017",
+      "date": "2017-04-09",
+      "mouza": "Shantipur",
+      "owners": [
+        {
+          "name": "Mst. Salma Begum"
+        }
+      ],
+      "parcels": [
+        {
+          "dag": "1021",
+          "area_decimal": 33
+        }
+      ]
+    }
+  ]
+}

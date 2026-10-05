@@ -1,0 +1,75 @@
+{
+  "name": "Name mismatch",
+  "description": "Charkhali mouza, dag 712. The seller's name is close to, but not the same as, the recorded owner.",
+  "proposed": {
+    "seller": "Selina Akter",
+    "dag": "712",
+    "area_decimal": 10
+  },
+  "documents": [
+    {
+      "id": "K1",
+      "doc_type": "khatian",
+      "title": "BS Khatian 230",
+      "date": "2003-01-15",
+      "mouza": "Charkhali",
+      "khatian_no": "230",
+      "owners": [
+        {
+          "name": "Md. Abdur Rahman Khan",
+          "father": "Sobhan Khan",
+          "share": 1
+        }
+      ],
+      "parcels": [
+        {
+          "dag": "712",
+          "area_decimal": 10
+        }
+      ]
+    },
+    {
+      "id": "D1",
+      "doc_type": "deed",
+      "title": "Sale deed 615/2019",
+      "date": "2019-10-08",
+      "mouza": "Charkhali",
+      "deed_no": "615/2019",
+      "sellers": [
+        {
+          "name": "Abdur Rahim Khan",
+          "father": "Sobhan Khan"
+        }
+      ],
+      "buyers": [
+        {
+          "name": "Selina Akter"
+        }
+      ],
+      "parcels": [
+        {
+          "dag": "712",
+          "area_decimal": 10
+        }
+      ]
+    },
+    {
+      "id": "M1",
+      "doc_type": "mutation",
+      "title": "Mutation 402/2020",
+      "date": "2020-01-20",
+      "mouza": "Charkhali",
+      "owners": [
+        {
+          "name": "Selina Akter"
+        }
+      ],
+      "parcels": [
+        {
+          "dag": "712",
+          "area_decimal": 10
+        }
+      ]
+    }
+  ]
+}

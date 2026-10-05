@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dalil — land deed pre-check</title>
+<meta name="description" content="Check a Bangladeshi land deed's ownership chain before you buy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600&family=Tiro+Bangla&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="brand">
+      <span class="seal-mark" aria-hidden="true">দ</span>
+      <div>
+        <h1>Dalil</h1>
+        <p class="tagline">Check a land deed's ownership chain before you buy.</p>
+      </div>
+    </div>
+    <div class="masthead-tools">
+      <div class="lang-toggle" role="group" aria-label="Report language">
+        <button type="button" data-lang="en" aria-pressed="true">English</button>
+        <button type="button" data-lang="bn" aria-pressed="false">বাংলা</button>
+      </div>
+      <span id="mode" class="mode" title="">Checking connection…</span>
+    </div>
+  </div>
+</header>
+
+<main class="workspace">
+  <section class="case" aria-labelledby="case-title">
+    <h2 id="case-title" class="step"><span class="step-n">1</span> Add your documents</h2>
+    <p class="hint">Photograph each page of the deed, the khatian and any mutation papers. Or try a sample case made from fictional records.</p>
+
+    <div class="samples" id="samples"></div>
+
+    <label class="dropzone" id="dropzone">
+      <input type="file" id="file-input" multiple accept="image/jpeg,image/png,image/webp,.txt">
+      <span class="dz-main">Upload page photos</span>
+      <span class="dz-sub">JPG, PNG or WebP, up to 8 MB each. Read by Nemotron 3 Nano Omni.</span>
+    </label>
+    <p id="upload-status" class="status-line" role="status"></p>
+
+    <h2 class="step"><span class="step-n">2</span> Check the details</h2>
+    <p class="hint">Fix anything that was read wrongly. Areas are in decimals (shatangsho).</p>
+    <div id="docs" class="docs"><p class="empty">No documents yet. Load a sample case or upload pages.</p></div>
+    <button type="button" class="ghost" id="add-doc">Add a document by hand</button>
+
+    <fieldset class="proposed">
+      <legend>The sale you're being offered</legend>
+      <label>Seller <input id="p-seller" autocomplete="off" placeholder="e.g. Salma Begum"></label>
+      <label>Dag no. <input id="p-dag" autocomplete="off" placeholder="1021"></label>
+      <label>Area (decimals) <input id="p-area" type="number" min="0" step="0.01" placeholder="33"></label>
+    </fieldset>
+
+    <button type="button" class="primary" id="analyze" disabled>Check this land</button>
+    <p id="analyze-status" class="status-line" role="status"></p>
+  </section>
+
+  <section class="report" aria-labelledby="report-title">
+    <h2 id="report-title" class="step"><span class="step-n">3</span> Read the report</h2>
+    <div id="report-body">
+      <div class="report-empty">
+        <p>Your report appears here: the ownership chain from the recorded owner to today's seller, every red flag beside the deed that caused it, and what to verify at the land office.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>Dalil is a pre-check, not legal advice. Confirm every finding with a lawyer and the land office. Sample cases use fictional people and places.</p>
+  <p>Runs on NVIDIA Nemotron models through Nebius Token Factory. Open source under the MIT license.</p>
+</footer>
+
+<template id="doc-tpl">
+  <article class="doc">
+    <div class="doc-head">
+      <select class="f-type" aria-label="Document type">
+        <option value="khatian">Khatian (record of rights)</option>
+        <option value="deed">Sale deed (dalil)</option>
+        <option value="mutation">Mutation (namjari)</option>
+      </select>
+      <span class="doc-src"></span>
+      <button type="button" class="remove" aria-label="Remove document">Remove</button>
+    </div>
+    <div class="doc-grid">
+      <label>Date <input class="f-date" type="date"></label>
+      <label>Mouza <input class="f-mouza"></label>
+      <label class="for-khatian">Khatian no. <input class="f-khatian"></label>
+      <label class="for-deed">Deed no. <input class="f-deedno"></label>
+      <label class="wide for-owners">Owners <input class="f-owners" placeholder="Name (share), Name (share)"></label>
+      <label class="wide for-deed">Sellers <input class="f-sellers" placeholder="Name, Name"></label>
+      <label class="wide for-deed">Buyers <input class="f-buyers" placeholder="Name, Name"></label>
+      <label class="wide">Dag : area <input class="f-parcels" placeholder="1021: 33, 1022: 5"></label>
+    </div>
+  </article>
+</template>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
